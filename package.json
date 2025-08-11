@@ -24,8 +24,6 @@
     "react-image-webp": "^0.8.0",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
-    "sass": "^1.89.2",
-    "sass-resources-loader": "^2.2.5",
     "typescript": "~4.9.0",
     "wagmi": "^0.12.3",
     "web-vitals": "^2.1.4",
@@ -61,7 +59,9 @@
     "@craco/craco": "^7.1.0",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
+    "craco-less": "^3.0.1",
     "file-loader": "^6.2.0",
+    "less": "^4.4.0",
     "resolve-url-loader": "^5.0.0"
   }
 }
