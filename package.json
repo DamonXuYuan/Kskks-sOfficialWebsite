@@ -1,8 +1,9 @@
 {
-  "name": "Gaff",
+  "name": "Kskks",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "5.x",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -20,6 +21,7 @@
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "enquire-js": "^0.2.1",
+    "framer-motion": "^12.23.12",
     "rc-banner-anim": "^2.4.5",
     "rc-queue-anim": "^2.0.0",
     "rc-scroll-anim": "^2.7.6",

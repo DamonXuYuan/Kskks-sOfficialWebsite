@@ -1,0 +1,130 @@
+.company {
+  width: 100%;
+  height: calc(100vh - 136px);
+  background-color: #f0f0f0;
+  .content {
+    width: 1440px;
+    height: inherit;
+    margin: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .card {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .ant-card-body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title {
+          font-size: 28px;
+          font-weight: 700;
+          margin-bottom: 50px;
+          padding-bottom: 20px;
+          position: relative;
+          &::after {
+            background-color: #000;
+            bottom: 0;
+            content: "";
+            height: 3px;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            width: 40px;
+          }
+        }
+
+        .detail {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          .left,
+          .right {
+            width: 100%;
+            .infoItem {
+              width: 100%;
+              height: 50px;
+              line-height: 50px;
+              border-top: 1px solid #000;
+              font-size: 18px;
+              font-weight: 400;
+              &:last-child {
+                border-bottom: 1px solid #000;
+              }
+            }
+          }
+          .right {
+            border-top: 1px solid #000;
+            .infoItem {
+              border: none;
+            }
+            .opcity {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .content {
+      width: 100%;
+      padding: 20px;
+      .card {
+        width: 100%;
+        .ant-card-body {
+          .detail {
+            height: max-content;
+            flex-direction: column;
+            .left,
+            .right {
+              width: 100%;
+              .infoItem {
+                display: flex;
+                width: 100%;
+                height: auto;
+                line-height: 28px;
+                font-size: 12px;
+                border-top: none;
+                border-top: 1px solid #000;
+                padding-left: 15px;
+                box-sizing: border-box;
+                .infoTitle {
+                  display: flex;
+                  flex-shrink: 0;
+                  width: 72px;
+                }
+                .infoText {
+                  display: flex;
+                  flex-direction: column;
+                  span {
+                    display: block;
+                  }
+                }
+                &:last-child {
+                  border-bottom: none;
+                  border-bottom: 1px solid #000;
+                }
+              }
+            }
+            .right {
+              border-top: none;
+              .infoItem {
+                border-top: none;
+                &:first-child {
+                  border-top: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

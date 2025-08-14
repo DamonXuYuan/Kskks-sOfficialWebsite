@@ -1,12 +1,16 @@
 import React from "react";
-import { isMobile } from "react-device-detect";
 
-import "./home.less";
+import "./index.less";
+import Banner from "@/components/Banner";
+import List from "@/components/List";
+import Servers from "@/components/Servers";
 
 const Home: React.FC = () => {
   return (
     <section className="home">
-      <div className="test">Home</div>
+      <Banner />
+      <Servers />
+      <List />
     </section>
   );
 };
