@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import logo from "@/assets/img/logo.png";
+import { Popup } from "antd-mobile";
 
 import "./index.less";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+
+import logo from "@/assets/img/logo.png";
+import meneIcon from "@/assets/img/mobileMenu.png";
 
 const Header: React.FC = () => {
-  const [current, setCurrent] = useState("/");
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   const items = [
     {
       label: "ホームページ",
@@ -15,8 +20,15 @@ const Header: React.FC = () => {
       label: "会社概要",
       key: "/company",
     },
+    {
+      label: "お問い合わせ",
+      key: "/contarctUs",
+    },
+    {
+      label: "紹介",
+      key: "/detail",
+    },
   ];
-  const navigate = useNavigate();
   return (
     <section className="header">
       <div className="content">
@@ -32,10 +44,11 @@ const Header: React.FC = () => {
           {items.map((item, index) => {
             return (
               <div
-                className={`item ${current === item?.key ? "active" : ""}`}
+                className={`item ${
+                  location?.pathname === item?.key ? "active" : ""
+                }`}
                 key={index}
                 onClick={() => {
-                  setCurrent(item?.key);
                   navigate(item?.key);
                 }}
               >
@@ -43,6 +56,43 @@ const Header: React.FC = () => {
               </div>
             );
           })}
+        </div>
+        {/* 移动端Menu按钮 */}
+        <div className="mobileMenu">
+          <img
+            src={meneIcon}
+            alt="menu"
+            className="menuIcon"
+            onClick={() => setShowMobileMenu(true)}
+          />
+          <Popup
+            visible={showMobileMenu}
+            onMaskClick={() => {
+              setShowMobileMenu(false);
+            }}
+            onClose={() => {
+              setShowMobileMenu(false);
+            }}
+            position="top"
+            bodyClassName="mobileMenuPopup"
+          >
+            {items.map((item, index) => {
+              return (
+                <div
+                  className={`menuItem ${
+                    location?.pathname === item?.key && "active"
+                  }`}
+                  key={index}
+                  onClick={() => {
+                    navigate(item?.key);
+                    setShowMobileMenu(false);
+                  }}
+                >
+                  {item?.label}
+                </div>
+              );
+            })}
+          </Popup>
         </div>
       </div>
     </section>

@@ -5,10 +5,15 @@
   justify-content: center;
   align-items: center;
   z-index: 999;
-  background-color: #01101f;
-  color: #999999;
+  background-color: #f0f0f0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
 .footer span {
   color: #2337e6;
   margin: 0 10px;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    font-size: 12px;
+  }
 }

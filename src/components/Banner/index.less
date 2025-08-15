@@ -16,30 +16,40 @@
     .banner-user-text {
       top: 40%;
     }
-    .text {
-      height: min-content;
-      font-size: 80px;
-      font-weight: bolder;
-      color: #fff;
+    .info {
       margin: auto;
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      img {
+        width: 250px;
+        height: 250px;
+      }
+      .text {
+        height: min-content;
+        font-size: 80px;
+        font-weight: bolder;
+        color: #fff;
+      }
     }
     .bg {
       background-size: auto 100%;
       background-position: center 0;
     }
     .bg1 {
-      background: url(../../assets//img//banner/banner1.jpg) no-repeat;
+      background: url(../../assets/img//banner/banner1.jpg) no-repeat;
     }
     .bg2 {
-      background: url(../../assets//img//banner/banner2.jpg) no-repeat;
+      background: url(../../assets/img//banner/banner2.jpg) no-repeat;
     }
     .bg3 {
-      background: url(../../assets//img//banner/banner3.jpg) no-repeat;
+      background: url(../../assets/img//banner/banner3.jpg) no-repeat;
     }
   }
   .banner-anim-elem .bg {
@@ -51,5 +61,29 @@
     overflow: hidden;
   }
   @media screen and (max-width: 768px) {
+    .banner-user-elem {
+      .info {
+        flex-direction: column;
+        img {
+          width: 150px;
+          height: 150px;
+        }
+        .text {
+          font-size: 30px;
+        }
+      }
+      .bg {
+        background-size: contain 100%;
+      }
+      .bg1 {
+        background-position: 90% 0;
+      }
+      .bg2 {
+        background-position: 87% 0;
+      }
+      .bg3 {
+        background-position: 78% 0;
+      }
+    }
   }
 }

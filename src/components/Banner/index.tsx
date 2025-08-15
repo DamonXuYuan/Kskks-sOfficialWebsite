@@ -6,6 +6,8 @@ import "rc-banner-anim/assets/index.css";
 import "rc-texty/assets/index.css";
 
 import "./index.less";
+import logo from "@/assets/img/logoMini.png";
+import AnimatedOnView from "../AnimatedOnView";
 
 const BgElement = Element.BgElement;
 const Banner: React.FC = () => {
@@ -14,15 +16,30 @@ const Banner: React.FC = () => {
       <BannerAnim prefixCls="banner-user" autoPlay>
         <Element prefixCls="banner-user-elem" key="0">
           <BgElement key="bg" className="bg bg1" />
-          <Texty className="text">Kskks</Texty>
+          <div className="info">
+            <AnimatedOnView>
+              <img src={logo} alt="logo" />
+            </AnimatedOnView>
+            <Texty className="text">開誠国際株式会社</Texty>
+          </div>
         </Element>
         <Element prefixCls="banner-user-elem" key="1">
           <BgElement key="bg" className="bg bg2" />
-          <Texty className="text">Yi Hui</Texty>
+          <div className="info">
+            <AnimatedOnView>
+              <img src={logo} alt="logo" />
+            </AnimatedOnView>
+            <Texty className="text">開誠国際株式会社</Texty>
+          </div>
         </Element>
         <Element prefixCls="banner-user-elem" key="2">
           <BgElement key="bg" className="bg bg3" />
-          <Texty className="text">Love You</Texty>
+          <div className="info">
+            <AnimatedOnView>
+              <img src={logo} alt="logo" />
+            </AnimatedOnView>
+            <Texty className="text">開誠国際株式会社</Texty>
+          </div>
         </Element>
       </BannerAnim>
     </section>

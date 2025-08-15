@@ -13,29 +13,22 @@
   justify-content: center;
   align-items: center;
 }
-.serverSection .content .title {
-  font-size: 40px;
-  line-height: 1;
-  font-weight: bolder;
-  margin-bottom: 30px;
-}
-.serverSection .content .subTitle {
-  font-size: 20px;
-  line-height: 1;
-  font-weight: 400;
-  margin-bottom: 60px;
-}
 .serverSection .content .list {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 }
 .serverSection .content .list .listItem {
-  width: 30%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 200px;
   cursor: pointer;
+}
+.serverSection .content .list .listItem:last-child {
+  margin-bottom: 0;
 }
 .serverSection .content .list .listItem .con {
   display: flex;
@@ -48,6 +41,7 @@
 .serverSection .content .list .listItem .con .text {
   font-size: 40px;
   font-weight: bolder;
+  margin-bottom: 10px;
 }
 .serverSection .content .list .listItem .con .subText {
   font-size: 20px;
@@ -64,6 +58,17 @@
     align-items: center;
   }
   .serverSection .content .list .listItem {
-    width: 80%;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  .serverSection .content .list .listItem .con .text,
+  .serverSection .content .list .listItem .con .subText {
+    text-align: center;
+  }
+  .serverSection .content .list .listItem .con .text {
+    font-size: 35px;
+  }
+  .serverSection .content .list .listItem .con .subText {
+    font-size: 16px;
   }
 }

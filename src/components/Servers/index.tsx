@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import {
-  MailOutlined,
+  ThunderboltOutlined,
   StarOutlined,
-  ShoppingCartOutlined,
+  HeatMapOutlined,
 } from "@ant-design/icons";
 
 import "rc-texty/assets/index.css";
@@ -17,26 +17,26 @@ interface IListItem {
 const Servers: React.FC = () => {
   const [list] = useState<IListItem[]>([
     {
-      img: <MailOutlined />,
-      text: "tesst",
-      subText: "subText",
+      img: <ThunderboltOutlined />,
+      text: "顧客の急務を最優先 迅速な初動対応を徹底",
+      subText: "Responding to customer urgency",
     },
     {
       img: <StarOutlined />,
-      text: "tesst2",
-      subText: "subText",
+      text: "プロセス可視化 サービスの全工程を透明に",
+      subText: "Full transparency throughout the process",
     },
     {
-      img: <ShoppingCartOutlined />,
-      text: "tesst3",
-      subText: "subText",
+      img: <HeatMapOutlined />,
+      text: "不断の研鑽 細部への完璧な追求",
+      subText: "Striving for excellence",
     },
   ]);
 
   const listItemRender = (info: IListItem, index: number) => {
     return (
       <div className="listItem" key={index}>
-        <AnimatedOnView>
+        <AnimatedOnView delay={index * 0.1}>
           <div className="con">
             <div className="icon">{info?.img}</div>
             <span className="text">{info?.text}</span>
@@ -50,12 +50,6 @@ const Servers: React.FC = () => {
   return (
     <section className="serverSection">
       <div className="content">
-        <div className="title">
-          <AnimatedOnView>我想你了！</AnimatedOnView>
-        </div>
-        <div className="subTitle">
-          <AnimatedOnView delay={0.2}>还有三天了哦~~</AnimatedOnView>
-        </div>
         <div className="list">
           {list.map((item: IListItem, index: number) => {
             return listItemRender(item, index);

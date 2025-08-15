@@ -7,7 +7,8 @@
   top: 0;
   left: 0;
   z-index: 999;
-  background-color: #01101f;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .header .content {
   width: 1440px;
@@ -19,6 +20,7 @@
 }
 .header .content .logo {
   height: 50px;
+  cursor: pointer;
 }
 .header .content .list {
   display: flex;
@@ -26,11 +28,11 @@
 .header .content .list .item {
   position: relative;
   margin-right: 30px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(22, 71, 124, 0.6);
   cursor: pointer;
 }
 .header .content .list .item:hover {
-  color: #ffffff;
+  color: #16477c;
 }
 .header .content .list .item:hover::after {
   content: "";
@@ -41,13 +43,13 @@
   width: 50%;
   height: 2px;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: #16477c;
 }
 .header .content .list .item:last-child {
   margin-right: 0;
 }
 .header .content .list .active {
-  color: #fff;
+  color: #16477c;
 }
 .header .content .list .active::after {
   content: "";
@@ -58,10 +60,58 @@
   width: 50%;
   height: 2px;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: #16477c;
+}
+.header .content .mobileMenu {
+  display: none;
 }
 @media screen and (max-width: 767px) {
   .header .content {
     width: 100%;
   }
+  .header .content .list {
+    display: none;
+  }
+  .header .content .mobileMenu {
+    display: flex;
+  }
+  .header .content .mobileMenu .menuIcon {
+    width: 41px;
+    height: 31px;
+  }
+}
+.mobileMenuPopup {
+  height: 40vh;
+  color: #fff;
+  background-color: #16477c !important;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mobileMenuPopup .menuItem {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: 40px;
+}
+.mobileMenuPopup .menuItem:last-child {
+  margin-bottom: 0;
+}
+.mobileMenuPopup .active {
+  color: #2a2a2a;
+  position: relative;
+}
+.mobileMenuPopup .active::after {
+  content: "";
+  width: 60%;
+  height: 2px;
+  background-color: #2a2a2a;
+  margin: auto;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
 }

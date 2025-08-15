@@ -7,7 +7,8 @@
   top: 0;
   left: 0;
   z-index: 999;
-  background-color: rgba(1, 16, 31, 1);
+  background-color: rgba(240, 240, 240, 1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   .content {
     width: 1440px;
     padding: 0 20px;
@@ -17,16 +18,17 @@
     align-items: center;
     .logo {
       height: 50px;
+      cursor: pointer;
     }
     .list {
       display: flex;
       .item {
         position: relative;
         margin-right: 30px;
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(22, 71, 124, 0.6);
         cursor: pointer;
         &:hover {
-          color: rgba(255, 255, 255, 1);
+          color: rgba(22, 71, 124, 1);
           &::after {
             content: "";
             position: absolute;
@@ -36,7 +38,7 @@
             width: 50%;
             height: 2px;
             border-radius: 20px;
-            background-color: #fff;
+            background-color: rgba(22, 71, 124, 1);
           }
         }
         &:last-child {
@@ -44,7 +46,7 @@
         }
       }
       .active {
-        color: #fff;
+        color: rgba(22, 71, 124, 1);
         &::after {
           content: "";
           position: absolute;
@@ -54,14 +56,63 @@
           width: 50%;
           height: 2px;
           border-radius: 20px;
-          background-color: #fff;
+          background-color: rgba(22, 71, 124, 1);
         }
       }
+    }
+    .mobileMenu {
+      display: none;
     }
   }
   @media screen and (max-width: 767px) {
     .content {
       width: 100%;
+      .list {
+        display: none;
+      }
+      .mobileMenu {
+        display: flex;
+        .menuIcon {
+          width: 41px;
+          height: 31px;
+        }
+      }
+    }
+  }
+}
+
+.mobileMenuPopup {
+  height: 40vh;
+  color: #fff;
+  background-color: rgba(22, 71, 124, 1) !important;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .menuItem {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .active {
+    color: #2a2a2a;
+    position: relative;
+    &::after {
+      content: "";
+      width: 60%;
+      height: 2px;
+      background-color: #2a2a2a;
+      margin: auto;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
     }
   }
 }

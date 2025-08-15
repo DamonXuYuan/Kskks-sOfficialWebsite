@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { isMobile } from "react-device-detect";
-import test from "@/assets/img/list/test.jpg";
+import img1 from "@/assets/img/list/img1.jpg";
+import img2 from "@/assets/img/list/img2.jpg";
+import img3 from "@/assets/img/list/img3.jpg";
+import img4 from "@/assets/img/list/img4.jpg";
+import img5 from "@/assets/img/list/img5.jpg";
+import img6 from "@/assets/img/list/img6.jpg";
+import img7 from "@/assets/img/list/img7.jpg";
+import img8 from "@/assets/img/list/img8.jpg";
 
 import "rc-texty/assets/index.css";
 import "./index.less";
@@ -14,36 +21,36 @@ interface IListItem {
 const List: React.FC = () => {
   const [list] = useState<IListItem[]>([
     {
-      img: test,
-      text: "tesst",
+      img: img1,
+      text: "日中貿易",
     },
     {
-      img: test,
-      text: "tesst2",
+      img: img2,
+      text: "SNSマーケティング事業",
     },
     {
-      img: test,
-      text: "tesst3",
+      img: img3,
+      text: "病院、医院の事務の受託",
     },
     {
-      img: test,
-      text: "tesst4",
+      img: img4,
+      text: "店舗運営",
     },
     {
-      img: test,
-      text: "tesst5",
+      img: img5,
+      text: "労働派遣",
     },
     {
-      img: test,
-      text: "tesst6",
+      img: img6,
+      text: "ホームページ作成",
     },
     {
-      img: test,
-      text: "tesst7",
+      img: img7,
+      text: "APP作成",
     },
     {
-      img: test,
-      text: "tesst8",
+      img: img8,
+      text: "名刺のデザインと作成",
     },
   ]);
 
@@ -64,10 +71,10 @@ const List: React.FC = () => {
     <section className="listSection">
       <div className="content">
         <div className="title">
-          <AnimatedOnView>你想我了吗？</AnimatedOnView>
+          <AnimatedOnView>事業項目</AnimatedOnView>
         </div>
         <div className="subTitle">
-          <AnimatedOnView delay={0.2}>亲爱的，我们终于要见面啦</AnimatedOnView>
+          <AnimatedOnView delay={0.2}>Main business offerings</AnimatedOnView>
         </div>
         <Row gutter={[20, 20]} className="list">
           {list.map((item: IListItem, index: number) => {

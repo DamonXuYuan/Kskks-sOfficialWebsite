@@ -18,30 +18,40 @@
 .banner .banner-user-elem .banner-user-text {
   top: 40%;
 }
-.banner .banner-user-elem .text {
-  height: min-content;
-  font-size: 80px;
-  font-weight: bolder;
-  color: #fff;
+.banner .banner-user-elem .info {
   margin: auto;
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.banner .banner-user-elem .info img {
+  width: 250px;
+  height: 250px;
+}
+.banner .banner-user-elem .info .text {
+  height: min-content;
+  font-size: 80px;
+  font-weight: bolder;
+  color: #fff;
 }
 .banner .banner-user-elem .bg {
   background-size: auto 100%;
   background-position: center 0;
 }
 .banner .banner-user-elem .bg1 {
-  background: url(../../assets//img//banner/banner1.jpg) no-repeat;
+  background: url(../../assets/img//banner/banner1.jpg) no-repeat;
 }
 .banner .banner-user-elem .bg2 {
-  background: url(../../assets//img//banner/banner2.jpg) no-repeat;
+  background: url(../../assets/img//banner/banner2.jpg) no-repeat;
 }
 .banner .banner-user-elem .bg3 {
-  background: url(../../assets//img//banner/banner3.jpg) no-repeat;
+  background: url(../../assets/img//banner/banner3.jpg) no-repeat;
 }
 .banner .banner-anim-elem .bg {
   width: 100%;
@@ -50,4 +60,28 @@
   top: 0;
   left: 0;
   overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .banner .banner-user-elem .info {
+    flex-direction: column;
+  }
+  .banner .banner-user-elem .info img {
+    width: 150px;
+    height: 150px;
+  }
+  .banner .banner-user-elem .info .text {
+    font-size: 30px;
+  }
+  .banner .banner-user-elem .bg {
+    background-size: contain 100%;
+  }
+  .banner .banner-user-elem .bg1 {
+    background-position: 90% 0;
+  }
+  .banner .banner-user-elem .bg2 {
+    background-position: 87% 0;
+  }
+  .banner .banner-user-elem .bg3 {
+    background-position: 78% 0;
+  }
 }
