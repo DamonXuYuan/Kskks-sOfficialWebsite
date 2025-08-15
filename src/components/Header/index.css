@@ -20,23 +20,45 @@
 .header .content .logo {
   height: 50px;
 }
-.header .content .menu {
-  background-color: transparent;
+.header .content .list {
+  display: flex;
 }
-.header .content .menu .ant-menu-item {
+.header .content .list .item {
+  position: relative;
+  margin-right: 30px;
   color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
 }
-.header .content .menu .ant-menu-item:hover {
+.header .content .list .item:hover {
   color: #ffffff;
 }
-.header .content .menu .ant-menu-item:hover::after {
-  border-bottom-color: #fff;
+.header .content .list .item:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #fff;
 }
-.header .content .menu .ant-menu-item-selected {
+.header .content .list .item:last-child {
+  margin-right: 0;
+}
+.header .content .list .active {
   color: #fff;
 }
-.header .content .menu .ant-menu-item-selected::after {
-  border-bottom-color: #fff;
+.header .content .list .active::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #fff;
 }
 @media screen and (max-width: 767px) {
   .header .content {

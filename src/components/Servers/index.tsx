@@ -4,7 +4,6 @@ import {
   StarOutlined,
   ShoppingCartOutlined,
 } from "@ant-design/icons";
-import test from "@/assets/img/list/test.jpg";
 
 import "rc-texty/assets/index.css";
 import "./index.less";

@@ -18,21 +18,43 @@
     .logo {
       height: 50px;
     }
-    .menu {
-      background-color: transparent;
-      .ant-menu-item {
+    .list {
+      display: flex;
+      .item {
+        position: relative;
+        margin-right: 30px;
         color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
         &:hover {
           color: rgba(255, 255, 255, 1);
           &::after {
-            border-bottom-color: #fff;
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 2px;
+            border-radius: 20px;
+            background-color: #fff;
           }
         }
+        &:last-child {
+          margin-right: 0;
+        }
       }
-      .ant-menu-item-selected {
+      .active {
         color: #fff;
         &::after {
-          border-bottom-color: #fff;
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 50%;
+          height: 2px;
+          border-radius: 20px;
+          background-color: #fff;
         }
       }
     }
