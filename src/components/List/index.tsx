@@ -67,9 +67,7 @@ const List: React.FC = () => {
           <AnimatedOnView>你想我了吗？</AnimatedOnView>
         </div>
         <div className="subTitle">
-          <AnimatedOnView delay={0.2}>
-            亲爱的，我们终于要见面啦！
-          </AnimatedOnView>
+          <AnimatedOnView delay={0.2}>亲爱的，我们终于要见面啦</AnimatedOnView>
         </div>
         <Row gutter={[20, 20]} className="list">
           {list.map((item: IListItem, index: number) => {
