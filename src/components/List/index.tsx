@@ -38,7 +38,7 @@ const List: React.FC = () => {
     },
     {
       img: img5,
-      text: "労働派遣",
+      text: "服装類生産受注",
     },
     {
       img: img6,

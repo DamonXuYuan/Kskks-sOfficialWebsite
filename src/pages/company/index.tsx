@@ -51,7 +51,7 @@ const company: React.FC = () => {
             </div>
             <div className="infoItem">
               <span className="infoTitle opcity">事業内容：</span>
-              <span className="infoText">労働派遣</span>
+              <span className="infoText">服装類生産受注</span>
             </div>
             <div className="infoItem">
               <span className="infoTitle opcity">事業内容：</span>
